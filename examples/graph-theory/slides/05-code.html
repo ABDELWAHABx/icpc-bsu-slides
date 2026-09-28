@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>05 · Code</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/code · 1920×1080
+     Paste RAW code inside <script type="text/x-code"> — no HTML escaping needed, it is highlighted automatically.
+     Attributes on .ide: data-file, data-lang (cpp|py|text), data-highlight="9,11-13",
+     data-add / data-del (diff lines), data-dim, data-mark="9:continue" (wavy underline), data-start.
+     Size: class "ide sm" (22px, ≤ 17 lines here) · "ide" (26px, ≤ 14 lines) · "ide lg" (30px, ≤ 12 lines). -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab">agenda.md</div><div class="tab active">dijkstra.cpp</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content" style="padding-top:52px; padding-bottom:48px;">
+      <div class="row grow" style="gap:72px;">
+        <div class="col" style="flex:0 0 520px;">
+          <div class="eyebrow">// 02.2 implementation</div>
+          <h1 class="h1">The Code</h1><!-- EDIT -->
+          <div class="accent-bar blue"></div>
+          <ul class="bullets compact">
+            <!-- EDIT: short notes that point at lines -->
+            <li><span><code class="blue">greater&lt;&gt;</code> turns the heap into a min-heap</span></li>
+            <li><span>Line 9 skips <b>stale</b> heap entries — this is what keeps it fast</span></li>
+            <li><span>Use <code>long long</code> — sums of weights overflow <code>int</code></span></li>
+          </ul>
+          <div class="grow"></div>
+          <div class="annot gold" style="align-self:flex-end; margin-right:-40px;">
+            line 9: the key trick!
+            <svg viewBox="0 0 110 70"><path d="M4 40 C 30 10, 70 10, 100 34" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M84 18 L102 36 L78 44" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <div class="ide sm grow" data-file="dijkstra.cpp" data-lang="cpp" data-highlight="9" data-mark="9:continue" style="align-self:center;">
+<script type="text/x-code">
+vector<ll> dijkstra(int src, vector<vector<pii>>& adj) {
+    int n = adj.size();
+    vector<ll> dist(n, LLONG_MAX);
+    priority_queue<pll, vector<pll>, greater<pll>> pq;
+    dist[src] = 0;
+    pq.push({0, src});
+    while (!pq.empty()) {
+        auto [d, u] = pq.top(); pq.pop();
+        if (d > dist[u]) continue;   // stale entry, skip
+        for (auto [v, w] : adj[u]) {
+            if (dist[u] + w < dist[v]) {
+                dist[v] = dist[u] + w;
+                pq.push({dist[v], v});
+            }
+        }
+    }
+    return dist;
+}
+</script>
+        </div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode blue">C++17</span>
+      <span class="mid">Ln 9, Col 26 · UTF-8 · LF</span>
+      <span class="page">5 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

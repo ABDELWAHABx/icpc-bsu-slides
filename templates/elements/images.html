@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Images</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT images · 3 ways to show a picture. src = ../assets/file.png (or https:// URL).
+     .figure  → retro window frame (bar + optional caption); size it with style="width:…;height:…"
+     .photo   → plain framed <img>, set width/height
+     .polaroid → tilted photo with handwritten caption -->
+
+<figure class="figure" data-export="figure" style="width:900px; height:600px;">
+  <div class="fig-bar"><i></i><i></i><i></i><span>screenshot.png</span></div>
+  <div class="fig-img"><img src="../kit/placeholder.svg" alt=""></div>
+  <figcaption>optional handwritten caption</figcaption>
+</figure>
+
+<img class="photo" data-export="photo" src="../kit/placeholder.svg" alt="" style="width:800px; height:500px;">
+
+<div class="polaroid" data-export="polaroid">
+  <img src="../kit/placeholder.svg" alt="" style="width:520px; height:380px;">
+  <span>ECPC 2025 — team BSU!</span>
+</div>
+
+</body>
+</html>

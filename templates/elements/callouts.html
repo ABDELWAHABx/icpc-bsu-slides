@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Callouts</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT callouts · 6 variants. Classes: (tip = default gold) | warn | info | note | def | ok.
+     .tag = the short vertical label. .title inside .msg is optional. Keep to 1–3 lines. -->
+
+<div class="callout" data-export="tip" style="width:1000px;">
+  <div class="tag">TIP</div>
+  <div class="msg"><span class="title">Read the constraints first</span>n ≤ 10⁵ usually means O(n log n) is the target.</div>
+</div>
+
+<div class="callout warn" data-export="warning" style="width:1000px;">
+  <div class="tag">WARNING</div>
+  <div class="msg">Only works with <b>non-negative</b> weights. Negative edges? Use Bellman-Ford.</div>
+</div>
+
+<div class="callout info" data-export="info" style="width:1000px;">
+  <div class="tag">RULE</div>
+  <div class="msg"><b>10⁸ simple operations ≈ 1 second.</b> Plug in the constraints before you pick.</div>
+</div>
+
+<div class="callout note" data-export="note" style="width:1000px;">
+  <div class="tag">NOTE</div>
+  <div class="msg">Codeforces uses 64-bit judges — <code>long long</code> is as fast as <code>int</code>.</div>
+</div>
+
+<div class="callout def" data-export="definition" style="width:1000px;">
+  <div class="tag">DEF</div>
+  <div class="msg"><span class="title">Relaxation</span>If <code>dist[u] + w &lt; dist[v]</code>, set <code>dist[v] = dist[u] + w</code>.</div>
+</div>
+
+<div class="callout ok" data-export="success" style="width:1000px;">
+  <div class="tag">AC</div>
+  <div class="msg">All 42 tests passed in <b>124 ms</b>. Nice work!</div>
+</div>
+
+</body>
+</html>

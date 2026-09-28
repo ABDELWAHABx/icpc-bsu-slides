@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Terminal</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT terminal · 3 variants.
+     Lines in <script type="text/x-term">:
+       "$ command"   → prompt + command (prompt text = data-prompt, default "icpc@bsu:~$")
+       "# comment"   → grey comment
+       {cursor}      → gold block cursor
+     Auto-coloured words: Accepted / AC / ✓ (green), Wrong Answer / WA / ✗ (red),
+     Time Limit Exceeded / TLE / MLE (orange), Runtime Error / RE (purple), Compilation Error / CE (grey).
+     data-title = bar text · data-bar="none" hides the bar. -->
+
+<div class="terminal" data-export="terminal-compile" data-title="~/shortest-paths" style="width:900px;">
+<script type="text/x-term">
+$ g++ -O2 -std=c++17 sol.cpp -o sol
+✓ Compiled successfully (0.8s)
+$ ./sol < sample.in
+6
+$ {cursor}
+</script>
+</div>
+
+<div class="terminal" data-export="terminal-judge" data-title="judge" style="width:900px;">
+<script type="text/x-term">
+$ judge submit sol.cpp
+# running 42 tests…
+test 1   Accepted            15 ms
+test 2   Accepted            23 ms
+test 7   Time Limit Exceeded 2000 ms
+═══ VERDICT: TLE on test 7 ═══
+</script>
+</div>
+
+<div class="terminal" data-export="terminal-plain" data-bar="none" data-prompt="$" style="width:700px;">
+<script type="text/x-term">
+$ cat session_summary.txt
+  Dijkstra · Bellman-Ford · Floyd
+$ echo "see you next week!"
+see you next week! ✓
+</script>
+</div>
+
+</body>
+</html>

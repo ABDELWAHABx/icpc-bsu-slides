@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>04 · Content (bullets + diagram)</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/content · 1920×1080
+     Bullets left (max 5–6, one line or two each), visual right.
+     Inline code: <code>…</code>. Marker highlight: <span class="hl">…</span>.
+     Graph: edit the JSON (nodes x/y are pixels inside width×height;
+     node style: default|source|target|visited|done|active|dim, edge style: default|path|dim). -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">dijkstra.cpp</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content">
+      <div class="heading">
+        <div class="eyebrow">// 02.1 intuition</div>
+        <h1 class="h1">How Dijkstra Works</h1><!-- EDIT -->
+        <div class="accent-bar"></div>
+      </div>
+
+      <div class="row grow" style="gap:80px;">
+        <div class="col" style="gap:44px;">
+          <ul class="bullets" style="font-size:30px; gap:24px;">
+            <!-- EDIT: bullets (keep each to one line) -->
+            <li><span>Set <code>dist[src] = 0</code>, every other vertex to ∞</span></li>
+            <li><span>Push the source into a <b>min-heap</b> by distance</span></li>
+            <li><span>Pop the closest vertex, <span class="hl">relax</span> its edges</span></li>
+            <li><span>If <code>dist[u] + w &lt; dist[v]</code>, update &amp; push <code>v</code></span></li>
+            <li><span>Repeat until the heap is empty</span></li>
+          </ul>
+          <div class="callout warn">
+            <div class="tag">WARNING</div>
+            <div class="msg">Only works with <b>non-negative</b> weights. Negative edges? Use Bellman-Ford.</div>
+          </div>
+        </div>
+
+        <div class="card" style="flex:0 0 620px; align-self:flex-start; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:26px;">
+          <div class="graph">
+<script type="application/json">
+{
+  "width": 560, "height": 400, "r": 36,
+  "nodes": [
+    {"id":"S","x":50,"y":200,"style":"source"},
+    {"id":"A","x":220,"y":60},
+    {"id":"B","x":220,"y":340},
+    {"id":"C","x":380,"y":200},
+    {"id":"T","x":515,"y":340,"style":"target"}
+  ],
+  "edges": [
+    {"a":"S","b":"A","w":4},
+    {"a":"S","b":"B","w":1,"style":"path"},
+    {"a":"B","b":"A","w":2,"style":"path"},
+    {"a":"A","b":"C","w":1,"style":"path"},
+    {"a":"B","b":"C","w":5},
+    {"a":"C","b":"T","w":3,"style":"path"},
+    {"a":"B","b":"T","w":8}
+  ],
+  "caption": "S → B → A → C → T = 7"
+}
+</script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode blue">O((V+E) log V)</span>
+      <span class="mid brand">ICPC-FCAI-BSU</span>
+      <span class="page">4 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

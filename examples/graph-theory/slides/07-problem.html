@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>07 · Problem</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/problem · 1920×1080
+     Codeforces-style statement. Difficulty chip: easy | medium | hard.
+     Sample I/O: text inside <pre> is shown verbatim (escape < as &lt;). -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">problems/A_shortest_route.txt</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content" style="padding-top:56px;">
+      <div class="row grow" style="gap:72px;">
+        <div class="col problem">
+          <div class="problem-head">
+            <span class="letter">A</span><!-- EDIT -->
+            <h1 class="h2">Shortest Route</h1><!-- EDIT -->
+            <span class="chip medium">Easy-Medium</span>
+            <span class="chip topic outline">graphs</span>
+          </div>
+          <div class="limits"><span><b>time</b> 2 s</span><span><b>memory</b> 256 MB</span></div>
+
+          <p class="statement">
+            You are given a weighted directed graph with <b>n</b> vertices and <b>m</b> edges.
+            Find the length of the shortest path from vertex <b>1</b> to vertex <b>n</b>.
+            If no path exists, print <code>-1</code>.
+          </p>
+          <div>
+            <div class="sec">Input</div>
+            <p>First line: <code class="blue">n m</code> (2 ≤ n ≤ 10⁵, 1 ≤ m ≤ 2·10⁵).<br>Next m lines: <code class="blue">u v w</code> (1 ≤ w ≤ 10⁹).</p>
+          </div>
+          <div>
+            <div class="sec">Output</div>
+            <p>A single integer — the shortest distance, or <code>-1</code>.</p>
+          </div>
+          <div class="grow"></div>
+          <icpc-mascot mood="thinking" size="150" style="align-self:flex-end;"></icpc-mascot>
+        </div>
+
+        <div class="col" style="flex:0 0 620px; gap:40px; padding-top:8px;">
+          <div class="sample-io">
+            <div class="in"><div class="io-head"><span>INPUT</span><span>#1</span></div>
+<pre>4 5
+1 2 1
+1 3 4
+2 3 2
+2 4 6
+3 4 3</pre></div>
+            <div class="out"><div class="io-head"><span>OUTPUT</span><span>#1</span></div>
+<pre>6</pre></div>
+          </div>
+          <div class="callout">
+            <div class="tag">HINT</div>
+            <div class="msg">Path <code class="gold">1→2→3→4</code> costs 1 + 2 + 3 = <b>6</b>. Watch the weight range…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode blue">PROBLEM A</span>
+      <span class="mid">source: CSES 1671 (modified)</span><!-- EDIT -->
+      <span class="page">7 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

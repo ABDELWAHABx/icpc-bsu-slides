@@ -1,0 +1,11 @@
+{
+  "name": "icpc-bsu-slides",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ICPC-FCAI-BSU branded slides: HTML templates → PNG → PPTX.",
+  "dependencies": {
+    "playwright-core": "^1.47.0",
+    "pptxgenjs": "^3.12.0"
+  }
+}

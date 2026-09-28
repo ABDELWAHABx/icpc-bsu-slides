@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image + text</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/image · 1920×1080
+     Text left, framed image right. Put image files in the deck's assets/ folder and use src="../assets/name.png"
+     (https:// URLs also work). Figure variants: "figure" (cover/crop) · "figure contain" (whole image, padded) ·
+     remove .fig-bar to drop the window bar · <figcaption> is optional.
+     For a full-width image use: <figure class="figure grow">…</figure> directly under .content. -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">images/diagram.png</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content">
+      <div class="row grow" style="gap:72px;">
+        <div class="col" style="flex:0 0 640px;">
+          <div class="eyebrow">// real world</div><!-- EDIT -->
+          <h1 class="h1">Maps are Graphs</h1><!-- EDIT -->
+          <div class="accent-bar blue"></div>
+          <ul class="bullets compact">
+            <li><span>Intersections are <b>vertices</b></span></li>
+            <li><span>Roads are <b>edges</b>, travel time is the weight</span></li>
+            <li><span>Your GPS runs a Dijkstra variant (A*)</span></li>
+          </ul>
+        </div>
+        <figure class="figure grow">
+          <div class="fig-bar"><i></i><i></i><i></i><span>city_map.png</span></div><!-- EDIT filename -->
+          <div class="fig-img"><img src="../kit/placeholder.svg" alt=""></div><!-- EDIT src -->
+          <figcaption>each junction = a node, each road = a weighted edge</figcaption><!-- EDIT or delete -->
+        </figure>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode blue">IMAGE</span>
+      <span class="mid brand">ICPC-FCAI-BSU</span>
+      <span class="page">1 / 1</span>
+    </div>
+  </div>
+  <aside class="notes">Speaker notes go here — they end up in the PPTX notes pane.</aside>
+</main>
+</body>
+</html>

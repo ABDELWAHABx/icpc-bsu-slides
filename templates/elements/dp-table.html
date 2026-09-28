@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · DP / trace table</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT dp-table · edit the JSON only.
+     "corner": top-left label (omit to hide the row-header column)
+     "cols": column headers · "rows": [{ "h": row header, "cells": [...] }]
+     cell = "text"  or  {"v":"text","c":"hl|act|done|dim|chg"}
+       hl gold · act crimson · done green · dim faded · chg red dot -->
+
+<div class="gridviz-host" data-export="dp-table">
+<script type="application/json">
+{
+  "corner": "i \\ w",
+  "cols": ["0", "1", "2", "3", "4", "5"],
+  "rows": [
+    {"h": "0", "cells": ["0", "0", "0", "0", "0", "0"]},
+    {"h": "1", "cells": ["0", "0", {"v":"3","c":"hl"}, "3", "3", "3"]},
+    {"h": "2", "cells": ["0", "0", "3", {"v":"4","c":"hl"}, "4", {"v":"7","c":"hl"}]},
+    {"h": "3", "cells": ["0", "0", "3", "4", {"v":"5","c":"chg"}, {"v":"7","c":"act"}]}
+  ]
+}
+</script>
+</div>
+
+<div class="gridviz-host" data-export="trace-table">
+<script type="application/json">
+{
+  "corner": "step",
+  "cols": ["S", "A", "B", "C", "T"],
+  "rows": [
+    {"h": "init",  "cells": [{"v":"0","c":"hl"}, "∞", "∞", "∞", "∞"]},
+    {"h": "pop S", "cells": [{"v":"0","c":"done"}, {"v":"4","c":"act"}, {"v":"1","c":"act"}, "∞", "∞"]},
+    {"h": "pop B", "cells": [{"v":"0","c":"done"}, {"v":"3","c":"act"}, {"v":"1","c":"done"}, {"v":"6","c":"act"}, {"v":"9","c":"act"}]}
+  ]
+}
+</script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Graph diagram</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT graph · edit the JSON only.
+     width/height: canvas in px · r: node radius · directed: true draws arrows
+     nodes: {"id","x","y", "label"?, "style"?, "note"?, "noteAbove"?}
+        style: default | source (blue) | target (crimson) | visited (gold) | done (green) | active (dashed ring) | dim
+        note: small dark tag under the node (e.g. "d=4"); noteAbove puts it on top
+     edges: {"a","b","w"?, "style"?}   style: default | path (crimson, thick) | dim (dotted)
+     caption: optional handwritten line under the graph
+     Tip: keep nodes ≥ 60px from the canvas edge so they are not clipped. -->
+
+<div class="graph" data-export="graph-weighted">
+<script type="application/json">
+{
+  "width": 640, "height": 440, "r": 38,
+  "nodes": [
+    {"id":"S","x":60,"y":220,"style":"source"},
+    {"id":"A","x":250,"y":70},
+    {"id":"B","x":250,"y":370},
+    {"id":"C","x":430,"y":220},
+    {"id":"T","x":590,"y":370,"style":"target"}
+  ],
+  "edges": [
+    {"a":"S","b":"A","w":4},
+    {"a":"S","b":"B","w":1,"style":"path"},
+    {"a":"B","b":"A","w":2,"style":"path"},
+    {"a":"A","b":"C","w":1,"style":"path"},
+    {"a":"B","b":"C","w":5},
+    {"a":"C","b":"T","w":3,"style":"path"},
+    {"a":"B","b":"T","w":8}
+  ],
+  "caption": "S → B → A → C → T = 7"
+}
+</script>
+</div>
+
+<div class="graph" data-export="graph-directed">
+<script type="application/json">
+{
+  "width": 700, "height": 300, "r": 36, "directed": true,
+  "nodes": [
+    {"id":"1","x":60,"y":150,"style":"visited","note":"in=0"},
+    {"id":"2","x":240,"y":60,"style":"active"},
+    {"id":"3","x":240,"y":240},
+    {"id":"4","x":440,"y":150},
+    {"id":"5","x":640,"y":150,"style":"dim"}
+  ],
+  "edges": [
+    {"a":"1","b":"2"}, {"a":"1","b":"3"}, {"a":"2","b":"4","style":"path"},
+    {"a":"3","b":"4"}, {"a":"4","b":"5","style":"dim"}
+  ]
+}
+</script>
+</div>
+
+<div class="graph" data-export="tree">
+<script type="application/json">
+{
+  "width": 620, "height": 360, "r": 34,
+  "nodes": [
+    {"id":"1","x":310,"y":50,"style":"source"},
+    {"id":"2","x":160,"y":170},
+    {"id":"3","x":460,"y":170},
+    {"id":"4","x":70,"y":300},
+    {"id":"5","x":250,"y":300,"style":"visited"},
+    {"id":"6","x":460,"y":300}
+  ],
+  "edges": [
+    {"a":"1","b":"2","style":"path"}, {"a":"1","b":"3"}, {"a":"2","b":"4"},
+    {"a":"2","b":"5","style":"path"}, {"a":"3","b":"6"}
+  ]
+}
+</script>
+</div>
+
+</body>
+</html>

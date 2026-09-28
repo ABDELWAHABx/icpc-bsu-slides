@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>09 · Comparison table</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/table · 1920×1080
+     Up to 5 rows × 4 columns. Row class "best" = gold highlight.
+     Complexity colours: <span class="o o-good|o-ok|o-bad">…</span>. Yes/No: <span class="yes|no">. -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">cheatsheet.md</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content">
+      <div class="heading">
+        <div class="eyebrow">// which one do I use?</div>
+        <h1 class="h1">Shortest-Path Cheat Sheet</h1><!-- EDIT -->
+        <div class="accent-bar tri"></div>
+      </div>
+
+      <table class="table">
+        <thead><tr><th>ALGORITHM</th><th>TIME</th><th>NEG. EDGES</th><th>USE WHEN</th></tr></thead>
+        <tbody>
+          <tr><td><b>BFS</b></td><td><span class="o o-good">O(V + E)</span></td><td><span class="no">no</span></td><td>all edges have the same weight</td></tr>
+          <tr class="best"><td><b>Dijkstra</b></td><td><span class="o o-good">O((V+E) log V)</span></td><td><span class="no">no</span></td><td>single source, weights ≥ 0</td></tr>
+          <tr><td><b>Bellman-Ford</b></td><td><span class="o o-ok">O(V · E)</span></td><td><span class="yes">yes</span></td><td>negative edges / detect negative cycles</td></tr>
+          <tr><td><b>Floyd-Warshall</b></td><td><span class="o o-bad">O(V³)</span></td><td><span class="yes">yes</span></td><td>all pairs, V ≤ ~500</td></tr>
+        </tbody>
+      </table>
+
+      <div class="row" style="margin-top:44px; align-items:center; gap:40px;">
+        <div class="callout info grow">
+          <div class="tag">RULE</div>
+          <div class="msg"><b>10⁸ simple operations ≈ 1 second.</b> Plug in the constraints before you pick.</div>
+        </div>
+        <span class="annot">start here ↑</span>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode blue">CHEATSHEET</span>
+      <span class="mid brand">ICPC-FCAI-BSU</span>
+      <span class="page">9 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

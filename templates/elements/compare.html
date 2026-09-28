@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Wrong vs right</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT compare · two columns: .side.bad and .side.good.
+     Each side: a .side-head label, then any content (code block, terminal, <p>). -->
+
+<div class="compare" data-export="compare" style="width:1600px;">
+  <div class="side bad">
+    <span class="side-head">✗ recursion (TLE)</span>
+    <div class="ide no-gutter" data-file="slow.cpp" data-lang="cpp">
+<script type="text/x-code">
+int fib(int n) {
+    return n < 2 ? n : fib(n-1) + fib(n-2);
+}
+</script>
+    </div>
+    <p>O(2ⁿ) calls — n = 50 never finishes.</p>
+  </div>
+  <div class="side good">
+    <span class="side-head">✓ memoised (AC)</span>
+    <div class="ide no-gutter" data-file="fast.cpp" data-lang="cpp">
+<script type="text/x-code">
+long long memo[91];
+long long fib(int n) {
+    if (n < 2) return n;
+    if (memo[n]) return memo[n];
+    return memo[n] = fib(n-1) + fib(n-2);
+}
+</script>
+    </div>
+    <p>O(n) — each value is computed once.</p>
+  </div>
+</div>
+
+</body>
+</html>

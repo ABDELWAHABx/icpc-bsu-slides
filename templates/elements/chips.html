@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Chips &amp; tags</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT chips · small labels. Chip classes:
+     easy | medium | hard (difficulty) · topic (adds #) · outline · solid · crimson | gold | blue.
+     Wrap several in <div class="chips"> to export as one row, or export a single <span class="chip">. -->
+
+<div class="chips" data-export="difficulty">
+  <span class="chip easy">Easy</span>
+  <span class="chip medium">Medium</span>
+  <span class="chip hard">Hard</span>
+</div>
+
+<div class="chips" data-export="topics">
+  <span class="chip topic outline">graphs</span>
+  <span class="chip topic outline">shortest-paths</span>
+  <span class="chip topic outline">greedy</span>
+  <span class="chip topic outline">dp</span>
+</div>
+
+<div class="chips" data-export="meta">
+  <span class="chip solid">★ 1600</span>
+  <span class="chip crimson">Div. 2 C</span>
+  <span class="chip gold">Level 1</span>
+  <span class="chip blue">C++17</span>
+</div>
+
+</body>
+</html>

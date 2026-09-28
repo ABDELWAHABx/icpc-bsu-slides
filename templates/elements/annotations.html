@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Handwritten annotations</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT annotations · handwritten notes (Caveat) with hand-drawn arrows.
+     Colour: class "annot" (crimson) | "annot gold" | "annot blue". "annot down" stacks the arrow under the text.
+     Change only the text; keep the <svg> arrows. -->
+
+<span class="annot" data-export="note-arrow-right">
+  line 9: the key trick!
+  <svg viewBox="0 0 110 70"><path d="M4 40 C 30 10, 70 10, 100 34" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M84 18 L102 36 L78 44" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+
+<span class="annot gold" data-export="note-arrow-left">
+  <svg viewBox="0 0 110 70"><path d="M106 40 C 80 10, 40 10, 10 34" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M26 18 L8 36 L32 44" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  don't forget this!
+</span>
+
+<span class="annot blue down" data-export="note-arrow-down">
+  look here
+  <svg viewBox="0 0 70 90"><path d="M30 4 C 50 30, 20 50, 36 84" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M20 70 L36 86 L50 68" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+
+<blockquote class="quote" data-export="quote">
+  A curious mind, a messy desk, and a lot of ‘just one more problem’…
+  <cite>— ICPC Beni Suef Community</cite>
+</blockquote>
+
+</body>
+</html>

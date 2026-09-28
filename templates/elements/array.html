@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Array visualisation</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT array · everything is set with attributes (no inner HTML needed):
+     data-values="3,1,4"      cell values (comma separated)
+     data-name="a[]"          label on the left (optional)
+     data-labels="S,A,B"      small labels above cells (optional)
+     data-hl="1,3-4"          gold cells     data-act="2"   crimson cells
+     data-done="0"            green cells    data-dim="5"   faded cells
+     data-ptr="0:L,4:R"       arrow + label under a cell (index:label)
+     data-start-index="1"     first index (default 0) · data-no-index hides indices
+     data-cell="90"           cell size in px (default 104) -->
+
+<div class="arr" data-export="array" data-name="a[]" data-values="2,7,1,8,2,8,1,8" data-hl="2-4"></div>
+
+<div class="arr" data-export="two-pointers" data-name="a[]" data-values="1,3,4,6,8,11,15" data-act="1,5" data-dim="0,6" data-ptr="1:L,5:R"></div>
+
+<div class="arr" data-export="prefix-sums" data-name="pre[]" data-values="0,2,9,10,18,20" data-start-index="0" data-done="0-5" data-cell="96"></div>
+
+<div class="arr" data-export="dist-array" data-name="dist[]" data-labels="S,A,B,C,T" data-values="0,3,1,4,7" data-done="0-4" data-no-index></div>
+
+</body>
+</html>

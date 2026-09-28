@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>02 · Agenda</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/agenda · 1920×1080
+     Up to 6 agenda rows. Row states: class="done" | class="now" | (none). -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">agenda.md</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content">
+      <div class="row grow">
+        <div class="col" style="flex:0 0 560px; justify-content:space-between;">
+          <div class="heading">
+            <div class="eyebrow">// session 03</div>
+            <h1 class="h1">Today's<br>Roadmap</h1><!-- EDIT -->
+            <div class="accent-bar"></div>
+            <p class="lead" style="font-size:32px;">Five stops, two practice problems, one mini-contest.</p><!-- EDIT -->
+          </div>
+          <icpc-mascot mood="focused" size="200" label="focused"></icpc-mascot>
+        </div>
+
+        <div class="col" style="justify-content:center;">
+          <ol class="agenda">
+            <!-- EDIT: rows. <small> is optional detail. -->
+            <li class="now"><span class="n">01</span><span class="t">Graph Representation<small>adjacency list vs matrix</small></span><span class="time">15 min</span></li>
+            <li><span class="n">02</span><span class="t">Dijkstra's Algorithm<small>single source, non-negative weights</small></span><span class="time">35 min</span></li>
+            <li><span class="n">03</span><span class="t">Bellman-Ford<small>negative edges &amp; cycle detection</small></span><span class="time">20 min</span></li>
+            <li><span class="n">04</span><span class="t">Floyd-Warshall<small>all pairs in O(V³)</small></span><span class="time">15 min</span></li>
+            <li><span class="n">05</span><span class="t">Mini-Contest<small>3 problems · Codeforces gym</small></span><span class="time">45 min</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode gold">AGENDA</span>
+      <span class="mid brand">ICPC-FCAI-BSU</span>
+      <span class="page">2 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

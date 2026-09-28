@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>10 · Quiz (question)</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/quiz · 1920×1080
+     4 options. To make the ANSWER slide: add class "reveal" to .quiz and class "correct" to the right option. -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">quiz.cpp</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content">
+      <div class="row" style="align-items:flex-start; justify-content:space-between;">
+        <div class="heading">
+          <div class="eyebrow">// quick check · 30 seconds</div>
+          <h1 class="h1" style="max-width:1300px;">We pop <code style="font-size:.62em">(d, u)</code> and <code style="font-size:.62em">d &gt; dist[u]</code>. What now?</h1><!-- EDIT -->
+          <div class="accent-bar gold"></div>
+        </div>
+        <icpc-mascot mood="thinking" size="170"></icpc-mascot>
+      </div>
+
+      <div class="quiz">
+        <!-- EDIT: options -->
+        <div class="opt"><span class="k">A</span><span>Relax all of <code>u</code>'s edges again</span></div>
+        <div class="opt correct"><span class="k">B</span><span>Skip it — the entry is stale</span></div>
+        <div class="opt"><span class="k">C</span><span>Push <code>u</code> back with distance <code>d</code></span></div>
+        <div class="opt"><span class="k">D</span><span>Stop — the graph has a negative cycle</span></div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode gold">QUIZ</span>
+      <span class="mid">answer on the next slide</span>
+      <span class="page">10 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

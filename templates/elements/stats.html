@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Stat cards</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT stats · big number + label. Top stripe colour cycles crimson → gold → blue.
+     <small> inside .num = unit. Use 2–4 cards in a row, or export one .stat alone. -->
+
+<div class="stats" data-export="stats-row" style="width:1500px;">
+  <div class="stat"><div class="num">10⁵</div><div class="lbl">vertices (n)</div></div>
+  <div class="stat"><div class="num">2<small>s</small></div><div class="lbl">time limit</div></div>
+  <div class="stat"><div class="num">256<small>MB</small></div><div class="lbl">memory limit</div></div>
+</div>
+
+<div class="stats" data-export="stats-community" style="width:1500px;">
+  <div class="stat"><div class="num">120+</div><div class="lbl">active members</div></div>
+  <div class="stat"><div class="num">36</div><div class="lbl">training sessions / season</div></div>
+  <div class="stat"><div class="num">4 500</div><div class="lbl">problems solved</div></div>
+  <div class="stat"><div class="num">3</div><div class="lbl">teams at ECPC</div></div>
+</div>
+
+<div class="stat" data-export="stat-single" style="width:560px;">
+  <div class="num">O(n log n)</div><div class="lbl">what we are aiming for</div>
+</div>
+
+</body>
+</html>

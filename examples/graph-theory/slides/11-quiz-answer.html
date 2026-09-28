@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>11 · Quiz (answer)</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/quiz-answer · 1920×1080
+     Same as the quiz slide with class "reveal" on .quiz and "correct" on the answer. -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">quiz.cpp</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content">
+      <div class="row" style="align-items:flex-start; justify-content:space-between;">
+        <div class="heading">
+          <div class="eyebrow">// answer</div>
+          <h1 class="h1" style="max-width:1300px;">We pop <code style="font-size:.62em">(d, u)</code> and <code style="font-size:.62em">d &gt; dist[u]</code>. What now?</h1>
+          <div class="accent-bar gold"></div>
+        </div>
+        <icpc-mascot mood="accepted" size="170"></icpc-mascot>
+      </div>
+
+      <div class="quiz reveal">
+        <div class="opt"><span class="k">A</span><span>Relax all of <code>u</code>'s edges again</span></div>
+        <div class="opt correct"><span class="k">B</span><span>Skip it — the entry is stale</span></div>
+        <div class="opt"><span class="k">C</span><span>Push <code>u</code> back with distance <code>d</code></span></div>
+        <div class="opt"><span class="k">D</span><span>Stop — the graph has a negative cycle</span></div>
+      </div>
+
+      <p class="small" style="margin-top:36px; font-size:26px;">A shorter path to <code>u</code> was already processed, so this heap entry is outdated. Relaxing again would only waste time.</p><!-- EDIT -->
+    </div>
+
+    <div class="statusbar">
+      <span class="mode" style="background:#3FBF6A; color:var(--frame);">✓ ACCEPTED</span>
+      <span class="mid brand">ICPC-FCAI-BSU</span>
+      <span class="page">11 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

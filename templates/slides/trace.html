@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>06 · Trace (table + graph)</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/trace · 1920×1080
+     Step-by-step trace. Table cells: "text" or {"v":"text","c":"act|hl|done|dim|chg"}.
+       act = just changed (crimson) · done = finalised (green) · hl = look here (gold) · dim = unreachable/greyed -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab">dijkstra.cpp</div><div class="tab active">trace.log</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content">
+      <div class="heading">
+        <div class="eyebrow">// 02.3 dry run</div>
+        <h1 class="h1">Tracing <code style="font-size:.7em">dist[]</code> Step by Step</h1><!-- EDIT -->
+        <div class="accent-bar gold" style="margin-bottom:36px;"></div>
+      </div>
+
+      <div class="row grow" style="gap:64px; align-items:flex-start;">
+        <div class="gridviz-host">
+<script type="application/json">
+{
+  "corner": "step",
+  "cols": ["S", "A", "B", "C", "T"],
+  "rows": [
+    {"h": "init",   "cells": [{"v":"0","c":"hl"}, "∞", "∞", "∞", "∞"]},
+    {"h": "pop S",  "cells": [{"v":"0","c":"done"}, {"v":"4","c":"act"}, {"v":"1","c":"act"}, "∞", "∞"]},
+    {"h": "pop B",  "cells": [{"v":"0","c":"done"}, {"v":"3","c":"act"}, {"v":"1","c":"done"}, {"v":"6","c":"act"}, {"v":"9","c":"act"}]},
+    {"h": "pop A",  "cells": [{"v":"0","c":"done"}, {"v":"3","c":"done"}, {"v":"1","c":"done"}, {"v":"4","c":"act"}, "9"]},
+    {"h": "pop C",  "cells": [{"v":"0","c":"done"}, {"v":"3","c":"done"}, {"v":"1","c":"done"}, {"v":"4","c":"done"}, {"v":"7","c":"act"}]},
+    {"h": "pop T",  "cells": [{"v":"0","c":"done"}, {"v":"3","c":"done"}, {"v":"1","c":"done"}, {"v":"4","c":"done"}, {"v":"7","c":"done"}]}
+  ]
+}
+</script>
+        </div>
+
+        <div class="col" style="gap:30px;">
+          <div class="graph">
+<script type="application/json">
+{
+  "width": 660, "height": 460, "r": 36,
+  "nodes": [
+    {"id":"S","x":50,"y":240,"style":"done","note":"d=0"},
+    {"id":"A","x":240,"y":100,"style":"done","note":"d=3","noteAbove":true},
+    {"id":"B","x":240,"y":370,"style":"done","note":"d=1"},
+    {"id":"C","x":430,"y":240,"style":"done","note":"d=4","noteAbove":true},
+    {"id":"T","x":610,"y":370,"style":"target","note":"d=7"}
+  ],
+  "edges": [
+    {"a":"S","b":"A","w":4,"style":"dim"},
+    {"a":"S","b":"B","w":1,"style":"path"},
+    {"a":"B","b":"A","w":2,"style":"path"},
+    {"a":"A","b":"C","w":1,"style":"path"},
+    {"a":"B","b":"C","w":5,"style":"dim"},
+    {"a":"C","b":"T","w":3,"style":"path"},
+    {"a":"B","b":"T","w":8,"style":"dim"}
+  ]
+}
+</script>
+          </div>
+          <div class="chips">
+            <span class="chip act" style="background:var(--crimson);color:var(--parchment);">updated</span>
+            <span class="chip" style="background:#D2E9D8;color:var(--green-ink);">finalised</span>
+            <span class="chip outline">A improves 4 → 3 via B</span><!-- EDIT -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode gold">DRY RUN</span>
+      <span class="mid brand">ICPC-FCAI-BSU</span>
+      <span class="page">6 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Bullet lists</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT bullets · 4 variants.
+     Each <li> holds ONE <span> with the text. Inline code: <code>…</code>, bold: <b>, marker: <span class="hl">.
+     Sub-points: a nested <ul> after the <span> (plain <li>text</li>). Max ~6 bullets per slide. -->
+
+<ul class="bullets" data-export="bullets" style="width:1000px;">
+  <li><span>Set <code>dist[src] = 0</code>, every other vertex to ∞</span></li>
+  <li><span>Push the source into a <b>min-heap</b> by distance</span></li>
+  <li><span>Pop the closest vertex, <span class="hl">relax</span> its edges</span></li>
+  <li><span>Repeat until the heap is empty</span></li>
+</ul>
+
+<ul class="bullets" data-export="bullets-nested" style="width:1000px;">
+  <li><span>Adjacency <b>list</b></span>
+    <ul><li>memory O(V + E)</li><li>best for sparse graphs</li></ul></li>
+  <li><span>Adjacency <b>matrix</b></span>
+    <ul><li>memory O(V²)</li><li>O(1) edge lookup, fine for V ≤ 5000</li></ul></li>
+  <li><span>Edge list — perfect for Kruskal &amp; Bellman-Ford</span></li>
+</ul>
+
+<ul class="bullets check" data-export="checklist" style="width:1000px;">
+  <li><span>Read the constraints before coding</span></li>
+  <li><span>Use <code>long long</code> for sums of weights</span></li>
+  <li><span>Dry-run the sample by hand</span></li>
+</ul>
+
+<ul class="bullets cross" data-export="crosslist" style="width:1000px;">
+  <li><span>Using <code>int</code> when answers reach 10¹⁸</span></li>
+  <li><span>Forgetting to reset arrays between test cases</span></li>
+  <li><span>Running Dijkstra on negative edges</span></li>
+</ul>
+
+</body>
+</html>

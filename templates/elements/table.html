@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Comparison table</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT table · plain HTML table.
+     Row class "best" = gold highlight. Complexity: <span class="o o-good|o-ok|o-bad">.
+     Yes / no: <span class="yes">…</span> / <span class="no">…</span>. Headers are auto-styled mono caps. -->
+
+<table class="table" data-export="complexity-table" style="width:1500px;">
+  <thead><tr><th>ALGORITHM</th><th>TIME</th><th>NEG. EDGES</th><th>USE WHEN</th></tr></thead>
+  <tbody>
+    <tr><td><b>BFS</b></td><td><span class="o o-good">O(V + E)</span></td><td><span class="no">no</span></td><td>all edges have the same weight</td></tr>
+    <tr class="best"><td><b>Dijkstra</b></td><td><span class="o o-good">O((V+E) log V)</span></td><td><span class="no">no</span></td><td>single source, weights ≥ 0</td></tr>
+    <tr><td><b>Bellman-Ford</b></td><td><span class="o o-ok">O(V · E)</span></td><td><span class="yes">yes</span></td><td>negative edges / detect negative cycles</td></tr>
+    <tr><td><b>Floyd-Warshall</b></td><td><span class="o o-bad">O(V³)</span></td><td><span class="yes">yes</span></td><td>all pairs, V ≤ ~500</td></tr>
+  </tbody>
+</table>
+
+<table class="table" data-export="constraints-table" style="width:900px;">
+  <thead><tr><th>n ≤</th><th>TARGET COMPLEXITY</th></tr></thead>
+  <tbody>
+    <tr><td class="mono">10–12</td><td><span class="o o-bad">O(n!)</span></td></tr>
+    <tr><td class="mono">20</td><td><span class="o o-bad">O(2ⁿ · n)</span></td></tr>
+    <tr><td class="mono">500</td><td><span class="o o-ok">O(n³)</span></td></tr>
+    <tr><td class="mono">5 000</td><td><span class="o o-ok">O(n²)</span></td></tr>
+    <tr class="best"><td class="mono">10⁶</td><td><span class="o o-good">O(n log n)</span></td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>

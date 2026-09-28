@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Judge results table</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT judge-table · submission results.
+     Verdict cell classes: v-ac | v-wa | v-tle | v-re | v-skip. Max ~8 rows. -->
+
+<table class="judge" data-export="judge-table">
+  <thead><tr><th>#</th><th>Verdict</th><th>Time</th><th>Memory</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td class="v-ac">Accepted</td><td>15 ms</td><td>3.2 MB</td></tr>
+    <tr><td>2</td><td class="v-ac">Accepted</td><td>31 ms</td><td>3.4 MB</td></tr>
+    <tr><td>3</td><td class="v-ac">Accepted</td><td>46 ms</td><td>5.1 MB</td></tr>
+    <tr><td>4</td><td class="v-wa">Wrong Answer</td><td>62 ms</td><td>5.1 MB</td></tr>
+    <tr><td>5</td><td class="v-skip">skipped</td><td>—</td><td>—</td></tr>
+  </tbody>
+  <tfoot><tr><td></td><td class="v-wa" colspan="3">Wrong Answer on test 4</td></tr></tfoot>
+</table>
+
+</body>
+</html>

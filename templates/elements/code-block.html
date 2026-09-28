@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Element · Code blocks</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="element-page">
+<!-- ELEMENT code-block · 3 variants.
+     Paste RAW code inside <script type="text/x-code"> (no escaping; indentation is auto-trimmed).
+     Attributes on the .ide div:
+       data-file="name.cpp"         filename in the bar
+       data-lang="cpp|py|text"      highlighter
+       data-highlight="3,5-7"       gold highlighted lines
+       data-add="4" data-del="3"    diff lines (green / red)
+       data-dim="1-2"               faded lines
+       data-mark="9:continue"       wavy underline on a word in a line
+       data-start="10"              first line number
+       data-bar="none"              hide the title bar
+     Classes: "ide sm" 22px · "ide" 26px · "ide lg" 30px · add "no-gutter" to hide line numbers.
+     Set the width with style="width:…px". -->
+
+<div class="ide" data-export="code-cpp" data-file="bfs.cpp" data-lang="cpp" data-highlight="7-8" style="width:1100px;">
+<script type="text/x-code">
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> bfs(int s, vector<vector<int>>& g) {
+    vector<int> d(g.size(), -1);
+    queue<int> q; q.push(s); d[s] = 0;
+    while (!q.empty()) {
+        int u = q.front(); q.pop();
+        for (int v : g[u]) if (d[v] == -1) {
+            d[v] = d[u] + 1;
+            q.push(v);
+        }
+    }
+    return d;
+}
+</script>
+</div>
+
+<div class="ide" data-export="code-python" data-file="dijkstra.py" data-lang="py" data-highlight="7" style="width:1100px;">
+<script type="text/x-code">
+import heapq
+
+def dijkstra(src, adj):
+    dist = [float("inf")] * len(adj)
+    dist[src], pq = 0, [(0, src)]
+    while pq:
+        d, u = heapq.heappop(pq)
+        if d > dist[u]: continue  # stale
+        for v, w in adj[u]:
+            if d + w < dist[v]:
+                dist[v] = d + w
+                heapq.heappush(pq, (dist[v], v))
+    return dist
+</script>
+</div>
+
+<div class="ide lg" data-export="code-diff" data-file="fix.cpp" data-lang="cpp" data-del="1" data-add="2" data-start="12" style="width:1100px;">
+<script type="text/x-code">
+int ans = 0;          // overflows past 2^31
+long long ans = 0;    // safe up to 9.2e18
+for (int x : a) ans += x;
+</script>
+</div>
+
+</body>
+</html>

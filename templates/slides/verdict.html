@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>08 · Verdict / pitfall</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/verdict · 1920×1080
+     Wrong vs right. Keep each code snippet ≤ 3 lines and each terminal ≤ 4 lines. -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">judge/submissions.log</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content" style="padding-top:48px;">
+      <div class="row" style="align-items:flex-start; justify-content:space-between;">
+        <div class="heading">
+          <div class="eyebrow">// common pitfall</div>
+          <h1 class="h1">Integer Overflow</h1><!-- EDIT -->
+          <div class="accent-bar wa" style="margin-bottom:34px;"></div>
+        </div>
+        <icpc-mascot mood="wrong-answer" size="150" style="margin-top:-10px;"></icpc-mascot>
+      </div>
+
+      <div class="compare grow">
+        <div class="side bad">
+          <span class="side-head">✗ int dist</span>
+          <div class="ide no-gutter" data-file="wrong.cpp" data-lang="cpp" data-mark="1:int">
+<script type="text/x-code">
+vector<int> dist(n, INT_MAX);
+dist[v] = dist[u] + w;   // 10^9 + 10^9 → 💥
+</script>
+          </div>
+          <div class="terminal" data-bar="none">
+<script type="text/x-term">
+$ judge submit wrong.cpp
+tests 1-3   Accepted
+test 4      Wrong Answer on test 4
+</script>
+          </div>
+        </div>
+        <div class="side good">
+          <span class="side-head">✓ long long dist</span>
+          <div class="ide no-gutter" data-file="correct.cpp" data-lang="cpp" data-add="1">
+<script type="text/x-code">
+vector<long long> dist(n, LLONG_MAX);
+dist[v] = dist[u] + w;   // ≤ 9.2e18 ✓
+</script>
+          </div>
+          <div class="terminal" data-bar="none">
+<script type="text/x-term">
+$ judge submit correct.cpp
+tests 1-42  Accepted
+verdict     Accepted ✓  (124 ms)
+</script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode" style="background:var(--wa);">⚠ WA ON TEST 4</span>
+      <span class="mid">rule of thumb: sums of weights → long long</span>
+      <span class="page">8 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>

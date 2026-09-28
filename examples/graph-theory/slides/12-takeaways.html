@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>12 · Key takeaways</title>
+<link rel="stylesheet" href="../kit/icpc.css">
+<script src="../kit/icpc.js" defer></script>
+</head>
+<body class="slide-page">
+<!-- TEMPLATE slide/takeaways · 1920×1080
+     3 stat cards on top (big number + label), checklist below (max 4). -->
+<main class="slide" data-export="slide">
+  <div class="window">
+    <div class="titlebar">
+      <div class="lights"><i></i><i></i><i></i></div>
+      <div class="tabs"><div class="tab active">summary.md</div></div>
+      <div class="winbtns"><span>─</span><span>□</span><span>×</span></div>
+    </div>
+
+    <div class="content">
+      <div class="heading">
+        <div class="eyebrow">// git commit -m "session 03"</div>
+        <h1 class="h1">Key Takeaways</h1><!-- EDIT -->
+        <div class="accent-bar"></div>
+      </div>
+
+      <div class="stats">
+        <!-- EDIT: stat cards -->
+        <div class="stat"><div class="num">O(E log V)</div><div class="lbl">Dijkstra with a binary heap</div></div>
+        <div class="stat"><div class="num">w ≥ 0</div><div class="lbl">the one rule Dijkstra needs</div></div>
+        <div class="stat"><div class="num">10<sup style="font-size:.5em">18</sup></div><div class="lbl">why distances live in <code>long long</code></div></div>
+      </div>
+
+      <div class="row" style="margin-top:50px; align-items:flex-end;">
+        <ul class="bullets check grow">
+          <!-- EDIT -->
+          <li><span>Skip stale heap entries with <code>if (d &gt; dist[u]) continue;</code></span></li>
+          <li><span>Negative weights → Bellman-Ford; all pairs on a small graph → Floyd-Warshall</span></li>
+          <li><span>Always dry-run the sample by hand before submitting</span></li>
+        </ul>
+        <icpc-mascot mood="happy" size="170"></icpc-mascot>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span class="mode">SUMMARY</span>
+      <span class="mid brand">ICPC-FCAI-BSU</span>
+      <span class="page">12 / 13</span>
+    </div>
+  </div>
+</main>
+</body>
+</html>
